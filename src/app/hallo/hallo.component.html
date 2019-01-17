@@ -1,0 +1,30 @@
+<p>
+  <input type="text" [(ngModel)]="nama">
+</p>
+<p>
+  Nama saya {{ nama }}
+</p>
+
+
+<p>
+  Hallo my name is {{nama}} <br>
+  Im {{usia}} years old <br>
+  next month im {{usia + 1}} years old
+  thanks
+</p>
+<p>
+  Hobi saya adalah
+</p>
+<ul>
+  <li *ngFor="let hb of hobi">
+    <b *ngIf="hb == 'Gaming'">{{ hb }}</b>
+    <i *ngIf="hb != 'Gaming'">{{ hb }}</i>
+  </li>
+</ul>
+
+<p *ngFor="let hb of hobi" [ngSwitch]="hb">
+  <span *ngSwitchDefault>Saya suka bermain</span>
+  <span *ngSwitchCase="'Gaming'"> Saya Suka sekali</span>
+  <span *ngSwitchCase="'Sepak Bola'"> Saya senang sekali ketika bermain</span>
+  {{ hb }}
+</p>

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Aplikasi pertama saya di angular :)';
+  isActive = false;
+  fontSize = "35px";
 }
